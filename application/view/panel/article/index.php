@@ -1,3 +1,4 @@
+<?php $this->include('panel.layouts.header'); ?>
 
 
                 <section class="mb-2 d-flex justify-content-between align-items-center">
@@ -40,5 +41,6 @@
                         </tbody>
                     </table>
                 </section>
+                <?php $this->include('panel.layouts.footer'); ?>
 
 

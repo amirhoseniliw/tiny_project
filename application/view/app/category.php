@@ -1,3 +1,4 @@
+<?php $this->include('app.layouts.header'); ?>
 
 
     <section class="container my-5">
@@ -40,4 +41,5 @@
             </section>
         </section>
     </section>
+    <?php $this->include('app.layouts.footer'); ?>
 
