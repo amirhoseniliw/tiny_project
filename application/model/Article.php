@@ -15,7 +15,7 @@ $this->closeConnection();
 return $result ;
     }
     public function insert($values){
-
+$query = "INSERT INTO"
     }
     public function update($id , $values){
 
