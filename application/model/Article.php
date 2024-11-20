@@ -25,7 +25,14 @@ class Article extends Model
         $this->closeConnection();
     }
     public function update($id, $values) {
-        $query= "UPDATE `articles` SET `title` = ? , `cat_id` = ?, `body` =  ? , `updated_at` = now() ";
+        $query= "UPDATE `articles` SET `title` = ? , `cat_id` = ?, `body` =  ? , `updated_at` = now() WHEER `id` = ?";
+        $this->execute($query ,array_merge( array_values($values), [$id]));
+        $this->closeConnection();
     }
-    public function delete($id) {}
+    public function delete($id) {
+        $query = "DELETE FROM `articles` WHERE `id` = ? ;";
+        $this->execute($query ,[$id]);
+        $this->closeConnection();
+
+    }
 }
