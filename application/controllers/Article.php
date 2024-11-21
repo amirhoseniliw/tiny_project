@@ -21,19 +21,28 @@ class Article extends Controller
     }
     public function store()
     {
-        // $article = new ArticleModel();
-        // $articles = $article->insert();
-    }
-    public function show($id) {
         $article = new ArticleModel();
-        $articles = $article->find($id);
-        return $this->View('panel.article.show', compact('articles'));
+        $article->insert($_POST);
+        return $this->redirect('article');
     }
+    // public function show($id) {
+       
+    // }
     public function edit($id) {
-        $article = new ArticleModel();
-        $articles = $article->find($id);
-        return $this->View('panel.article.edit', compact('articles'));
+        $category = new CategoryModel();
+        $categories = $category->all();
+        $ob_article = new ArticleModel();
+        $article = $ob_article->find($id);
+        return $this->View('panel.article.edit', compact('categories','articles'));
     }
-    public function update($id) {}
-    public function destroy($id) {}
+    public function update($id) {
+        
+        $article = new ArticleModel();
+        $article->update($id ,$_POST);
+        return $this->redirect('article');
+    }
+    public function destroy($id) {
+        $article = new ArticleModel();
+        $article->delete($id);
+        return $this->back();    }
 }
