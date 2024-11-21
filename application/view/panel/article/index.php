@@ -28,7 +28,7 @@
                     <td><?= substr($aritcle['body'], 0, 40) . "..." ?></td>
                     <td>
                         <a href="<?php $this->url('/article/edit/' . $aritcle['id']) ?>" class="btn btn-info btn-sm">Edit</a>
-                        <a href="<?php $this->url('/article/delete/' . $aritcle['id']) ?>" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="<?php $this->url('/article/destroy/' . $aritcle['id']) ?>" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr><?php } ?>
 
