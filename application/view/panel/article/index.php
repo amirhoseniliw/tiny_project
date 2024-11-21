@@ -3,7 +3,7 @@
 
                 <section class="mb-2 d-flex justify-content-between align-items-center">
                     <h2 class="h4">Articles</h2>
-                    <a href="create.html" class="btn btn-sm btn-success">Create</a>
+                    <a href="<?php $this->url('article/create') ?>" class="btn btn-sm btn-success">Create</a>
                 </section>
 
                 <section class="table-responsive">
@@ -18,26 +18,20 @@
                         </tr>
                         </thead>
                         <tbody>
+                            <?php
+                             foreach ($articles as $aritcle) {
+                               ?>
                         <tr>
-                            <td>1</td>
-                            <td>Sport vs Smoke</td>
-                            <td>1</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                            <td><?= $aritcle['id'] ?></td>
+                            <td><?= $aritcle['title'] ?></td>
+                            <td><?= $aritcle['cat_id'] ?></td>
+                            <td><?= $aritcle['body'] ?></td>
                             <td>
                                 <a href="edit.html" class="btn btn-info btn-sm">Edit</a>
                                 <a href="#" class="btn btn-danger btn-sm">Delete</a>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>global warming</td>
-                            <td>2</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                            <td>
-                                <a href="edit.html" class="btn btn-info btn-sm">Edit</a>
-                                <a href="#" class="btn btn-danger btn-sm">Delete</a>
-                            </td>
-                        </tr>
+                        </tr><?php }?>
+                       
                         </tbody>
                     </table>
                 </section>
