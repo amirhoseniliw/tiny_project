@@ -3,7 +3,7 @@
 
                 <section class="mb-2 d-flex justify-content-between align-items-center">
                     <h2 class="h4">Articles</h2>
-                    <a href="<?php $this->url('article/create') ?>" class="btn btn-sm btn-success">Create</a>
+                    <a href="<?php $this->url('/article/create') ?>" class="btn btn-sm btn-success">Create</a>
                 </section>
 
                 <section class="table-responsive">
@@ -25,10 +25,10 @@
                             <td><?= $aritcle['id'] ?></td>
                             <td><?= $aritcle['title'] ?></td>
                             <td><?= $aritcle['cat_id'] ?></td>
-                            <td><?= $aritcle['body'] ?></td>
+                            <td><?= substr($aritcle['body'], 0 ,10) ?></td>
                             <td>
-                                <a href="edit.html" class="btn btn-info btn-sm">Edit</a>
-                                <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                <a href="<?php $this->url('/article/edit/').$aritcle['id'] ?>" class="btn btn-info btn-sm">Edit</a>
+                                <a href="<?php $this->url('/article/delete/'.$aritcle['id'] ) ?>" class="btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr><?php }?>
                        
