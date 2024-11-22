@@ -16,13 +16,13 @@ class Category extends Controller{
         $category->insert($_POST);
         return $this->redirect('category');
     }
-    // public function show($id){
-
-    // }
+    public function show($id){
+        return $this->View('panel.category.show', compact('categories'));
+    }
     public function edit($id){
-        $category = new CategoryModel();
-        $category = $category->find($id);
-        return $this->View('panel.article.create');
+        $ob_category = new CategoryModel();
+        $category = $ob_category->find($id);
+        return $this->View('panel.article.edit' , compact('category'));
     }
     public function update($id){
         $category = new CategoryModel();

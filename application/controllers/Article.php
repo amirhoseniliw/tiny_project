@@ -34,7 +34,7 @@ class Article extends Controller
         $categories = $category->all();
         $ob_article = new ArticleModel();
         $article = $ob_article->find($id);
-        return $this->View('panel.article.edit', compact('categories','articles'));
+        return $this->View('panel.article.edit', compact('categories','article'));
     }
     public function update($id) {
         
