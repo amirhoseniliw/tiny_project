@@ -8,8 +8,7 @@ use application\model\Category as CategoryModel;
 class Article extends Controller
 {
     public function index()
-    { $category = new CategoryModel();
-        $categories = $category->all();
+    { 
         $article = new ArticleModel();
         $articles = $article->all();
         return $this->View('panel.article.index', compact('categories','articles'));
