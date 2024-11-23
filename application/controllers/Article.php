@@ -11,7 +11,7 @@ class Article extends Controller
     { 
         $article = new ArticleModel();
         $articles = $article->all();
-        return $this->View('panel.article.index', compact('categories','articles'));
+        return $this->View('panel.article.index', compact('articles'));
     }
     public function create()
     {
@@ -20,7 +20,7 @@ class Article extends Controller
         return $this->View('panel.article.create', compact('categories'));
     }
     public function store()
-    {
+    { 
         $article = new ArticleModel();
         $article->insert($_POST);
         return $this->redirect('article');
