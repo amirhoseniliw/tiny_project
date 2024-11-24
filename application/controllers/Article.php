@@ -29,6 +29,7 @@ class Article extends Controller
        
     // }
     public function edit($id) {
+
         $category = new CategoryModel();
         $categories = $category->all();
         $ob_article = new ArticleModel();
