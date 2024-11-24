@@ -4,7 +4,7 @@
                 <form>
                     <section class="form-group">
                         <label for="title">Title</label>
-                        <input type="text" class="form-control" id="title" placeholder="title ...">
+                        <input type="text" class="form-control" id="title" placeholder="title ..." value="<?= $article['titel']?>">
                     </section>
                     <section class="form-group">
                         <label for="cat_id">Category</label>

@@ -9,13 +9,13 @@ class Category extends Model {
         return $result;
     }
     public function article($cat_id){
-        $query = "SELECT * FROM `articles` WHERE `cat_id` =  ?";
+        $query = "SELECT * FROM `articles` WHERE `cat_id` =  ? ";
         $result = $this->query($query, [$cat_id])->fetchAll();
         $this->closeConnection();
         return $result;
     }
     public function find($id){
-        $query = "SELECT * FROM `categories` WHERE `id` =  ?";
+        $query = "SELECT * FROM `categories` WHERE `id` =  ? ";
         $result = $this->query($query, [$id])->fetch();
         $this->closeConnection();
         return $result;
