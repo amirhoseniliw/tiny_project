@@ -20,12 +20,12 @@ class Article extends Model
     }
     public function insert($values)
     {
-        $query = "INSERT INTO `articles` (`title` , `cat_id`,`body`, created_at) VALUES (?,?,?,now())";
+        $query = "INSERT INTO `articles` (`title`, `cat_id`, `body`, `created_at`) VALUES (?, ?, ?, NOW()); ";
         $this->execute($query , array_values($values));
         $this->closeConnection();
     }
     public function update($id, $values) {
-        $query= "UPDATE `articles` SET `title` = ? , `cat_id` = ?, `body` =  ? , `updated_at` = now() WHEER `id` = ?";
+        $query= "UPDATE `articles` SET `title` = ?, `cat_id` = ?, `body` = ?, `updated_at` = NOW() WHERE `id` = ? ";
         $this->execute($query ,array_merge( array_values($values), [$id]));
         $this->closeConnection();
     }

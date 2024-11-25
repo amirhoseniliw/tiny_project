@@ -1,6 +1,4 @@
 <?php $this->include('panel.layouts.header'); ?>
-
-
 <form action="<?php $this->url('article/store'); ?>" method="POST">
     <section class="form-group">
         <label for="title">Title</label>
