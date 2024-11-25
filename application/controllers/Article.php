@@ -39,7 +39,6 @@ class Article extends Controller
     public function update($id) {
         $article = new ArticleModel();
         $article->update($id ,$_POST);
-    exit;
         return $this->redirect('article');
     }
     public function destroy($id) {
