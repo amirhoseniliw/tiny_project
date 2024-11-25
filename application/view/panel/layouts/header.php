@@ -20,13 +20,13 @@
             <section class="col-md-2 p-0">
                 <section class="sidebar">
                     <section class="sidebar-link">
-                        <a href="index.html">panel</a>
+                        <a href="<?php $this->url('/index'); ?>">panel</a>
                     </section>
                     <section class="sidebar-link">
-                        <a href="category/index.html">category</a>
+                        <a href="<?php $this->url('/category'); ?> ">category</a>
                     </section>
                     <section class="sidebar-link">
-                        <a href="article/index.html">article</a>
+                        <a href="<?php $this->url('/article'); ?> ">article</a>
                     </section>
 
                 </section>

@@ -37,9 +37,9 @@ class Article extends Controller
         return $this->View('panel.article.edit', compact('categories','article'));
     }
     public function update($id) {
-        
         $article = new ArticleModel();
         $article->update($id ,$_POST);
+    exit;
         return $this->redirect('article');
     }
     public function destroy($id) {
