@@ -26,7 +26,7 @@ class Category extends Model {
         $this->closeConnection();
     }
     public function update($id , $values){
-        $query= "UPDATE `categories` SET `name` = ? , `description` = ?, `updated_at` = now() WHEER `id` = ?";
+        $query= "UPDATE `categories` SET `name` = ? , `description` = ?, `updated_at` = now() WHERE `id` = ? ";
         $this->execute($query ,array_merge( array_values($values), [$id]));
         $this->closeConnection();
     }

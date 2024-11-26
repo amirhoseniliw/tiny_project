@@ -22,7 +22,7 @@ class Category extends Controller{
     public function edit($id){
         $ob_category = new CategoryModel();
         $category = $ob_category->find($id);
-        return $this->View('panel.article.edit' , compact('category'));
+        return $this->View('panel.category.edit' , compact('category'));
     }
     public function update($id){
         $category = new CategoryModel();
