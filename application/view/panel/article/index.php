@@ -12,19 +12,20 @@
             <tr>
                 <th>#</th>
                 <th>title</th>
-                <th>cat_id</th>
+                <th>category name</th>
                 <th>body</th>
                 <th>setting</th>
             </tr>
         </thead>
         <tbody>
             <?php
+           
             foreach ($articles as $aritcle) {
             ?>
                 <tr>
                     <td><?= $aritcle['id'] ?></td>
                     <td><?= $aritcle['title'] ?></td>
-                    <td><?= $aritcle['cat_id'] ?></td>
+                    <td><?= $aritcle['category_name'] ?></td>
                     <td><?= substr($aritcle['body'], 0, 40) . "..." ?></td>
                     <td>
                         <a href="<?php $this->url('/article/edit/' . $aritcle['id']) ?>" class="btn btn-info btn-sm">Edit</a>

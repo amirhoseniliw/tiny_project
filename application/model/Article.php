@@ -6,7 +6,7 @@ class Article extends Model
 {
     public function all()
     {
-        $query = "SELECT * FROM `articles`";
+        $query = "SELECT *,( SELECT `name` FROM `categories` WHERE `categories`.`id` = `articles`. `cat_id`) as 'category_name' FROM `articles`";
         $result = $this->query($query)->fetchAll();
         $this->closeConnection();
         return $result;
