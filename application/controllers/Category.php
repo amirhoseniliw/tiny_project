@@ -9,7 +9,7 @@ class Category extends Controller{
         return $this->View('panel.category.index', compact('categories'));
     }
     public function create(){
-        return $this->View('panel.article.create');
+        return $this->View('panel.category.create');
     }
     public function store(){
         $category = new CategoryModel();
