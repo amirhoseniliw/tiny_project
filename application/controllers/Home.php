@@ -18,6 +18,8 @@ class Home extends Controller{
         $ob_category = new CategoryModel();
         $categories = $ob_category->all();
         $ob_category = new CategoryModel();
+        $category = $ob_category->find($id);
+        $ob_category = new CategoryModel();
          $article = $ob_category->article($id);
     }
     
