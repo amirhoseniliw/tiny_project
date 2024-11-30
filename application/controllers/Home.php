@@ -26,11 +26,9 @@ class Home extends Controller{
     }
     
     public function show($id){
-        $ob_category = new CategoryModel();
-        $categories = $ob_category->all();
-        $ob_article = new CategoryModel();
+        $ob_article = new ArticleModel();
         $article = $ob_article->find($id);
-        return $this->View('app.detail', compact('categories', 'article'));
+        return $this->View('app.detail', compact('article'));
 
     }
 
