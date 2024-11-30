@@ -1,5 +1,5 @@
 
-<?php global $categories; $this->include('app.layouts.header', [$categories => $categories] ); ?>
+<?php global $categories; $this->include('app.layouts.header', ['categories' => $categories] ); ?>
 
     <section class="container my-5">
         <!-- Example row of columns -->

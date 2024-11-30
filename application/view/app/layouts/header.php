@@ -23,7 +23,6 @@
                 </li>
                 <?php
         var_dump($categories);
-        exit();
                  foreach ($categories as $category) {
             ?>
                 <li class="nav-item">
