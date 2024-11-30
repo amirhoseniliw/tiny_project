@@ -21,14 +21,16 @@ class Home extends Controller{
         $category = $ob_category->find($id);
         $ob_category = new CategoryModel();
          $article = $ob_category->article($id);
-         return $this->View('app.category', compact('categories', 'articles','category'));
+         return $this->View('app.category', compact('categories', 'article','category'));
 
     }
     
     public function show($id){
+        $category = new CategoryModel();
+        $categories = $category->all();
         $ob_article = new ArticleModel();
         $article = $ob_article->find($id);
-        return $this->View('app.detail', compact('article'));
+        return $this->View('app.detail', compact('article','categories'));
 
     }
 

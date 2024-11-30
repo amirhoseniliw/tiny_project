@@ -21,18 +21,15 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
+                <?php
+        var_dump($categories);
+        exit();
+                 foreach ($categories as $category) {
+            ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="category.html">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="category.html">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="category.html">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="category.html">Link</a>
-                </li>
+                    <a class="nav-link" href="category.html"><?= $category['name'] ?></a>
+                </li><?php } ?>
+                
             </ul>
         </div>
     </nav>
