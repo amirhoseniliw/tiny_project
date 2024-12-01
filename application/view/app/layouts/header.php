@@ -25,7 +25,7 @@
                  foreach ($categories as $category) {
             ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php $this->url('/home/category/' . $category['id']) ?>"><?= $category['name'] ?></a>
+                    <a class="nav-link" href="<?php $this->url('/home/category/'. $category['id']) ?>"><?= $category['name'] ?></a>
                 </li><?php } ?>
                 
             </ul>

@@ -17,11 +17,13 @@ class Home extends Controller{
     public function category($id){
         $ob_category = new CategoryModel();
         $categories = $ob_category->all();
+
         $ob_category = new CategoryModel();
         $category = $ob_category->find($id);
+
         $ob_category = new CategoryModel();
-         $article = $ob_category->article($id);
-         return $this->View('app.category', compact('categories', 'article','category'));
+         $articles = $ob_category->article($id);
+         return $this->View('app.category', compact('categories', 'articles','category'));
 
     }
     
