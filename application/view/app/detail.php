@@ -7,7 +7,7 @@
             <section class="col-md-12">
                 <h1><?= $article['title'] ?></h1>
                 <h5 class="d-flex justify-content-between align-items-center">
-                    <a href="category.html"><?= $article['category'] ?></a>
+                    <a href="<?php $this->url('/home/category/' . $article['cat_id']) ?>"><?= $article['category'] ?></a>
                     <span class="date-time"><?= $article['created_at'] ?></span>
                 </h5>
                 <article class="bg-article p-3">
